@@ -1,0 +1,46 @@
+/* Ramón Loesch */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:1.125em}
+body{margin:0;padding:1.125em;background:#fff;color:#111;font-family:TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;font-size:1em;line-height:1.25;font-kerning:normal;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;font-size:1em;font-weight:normal}
+p,ul,figure{margin:0}
+ul{padding:0;list-style:none}
+img{display:block;max-width:100%;height:auto}
+a{color:#111;text-decoration:none}
+a:hover,a:focus-visible,a:active{color:#00f;text-decoration:underline}
+a:focus-visible{outline:1px solid #00f;outline-offset:2px}
+
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.25em 1em;font-size:.875em;text-transform:uppercase}
+nav ul{display:flex}
+nav li+li{margin-left:.5em}
+nav li::before{content:"["}
+nav li::after{content:"]"}
+nav [aria-current]{font-weight:bold;font-style:italic}
+
+main{margin-top:3em}
+.left-column{max-width:31.25em}
+.right-column{max-width:42em}
+.left-column+.right-column{margin-top:1em}
+.credit,.gap{margin-top:1em}
+
+.work+.work{margin-top:5.125em;padding-top:1.5em;border-top:1px solid #111}
+.images{display:grid;grid-template-columns:1fr 1fr;gap:1.125em;align-items:start}
+.images>a:first-child{grid-column:1/-1}
+.images img{width:100%}
+
+.home-img{margin-top:1em;max-width:31.25em}
+
+.cv h2{font-style:italic}
+.cv *+h2{margin-top:3em}
+.cv p{display:grid;grid-template-columns:6.5em 1fr}
+
+@media screen and (min-width:56.25em){
+  html{scroll-padding-top:4.5em}
+  header{position:fixed;top:0;left:0;right:0;z-index:1;padding:1.125em;background:#fff}
+  main{margin-top:4em}
+  .columns{display:flex;align-items:flex-start;max-width:73.25em}
+  .left-column{flex:0 1 31.25em;padding-right:1.125em}
+  .right-column{flex:0 1 42em;padding-left:1.125em}
+  .left-column+.right-column{margin-top:0}
+  .home .right-column{padding-left:0}
+}
